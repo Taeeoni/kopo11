@@ -1,4 +1,4 @@
-package Test01;
+package project;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,20 +15,18 @@ public class SlipperOutStreamTest {
 
 	public static void main(String[] args) {
 		
-		String path = "C:\\test\\seoulapart20211.csv";			
-		File file = null;
-		BufferedWriter bw = null;		
 		String line;
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(path));
-			file = new File(path);
-			bw = new BufferedWriter(new FileWriter(file, true));
-			
-			String data = "16분"; // need to input from SlipperCrwaling
-		
-				bw.write("," + data);
-		
+			BufferedReader br = new BufferedReader(new FileReader("C:\\javatest\\seoulapart2021.csv"));
+			File file = new File("C:\\javatest\\seoulapart2021 - 복사본.csv");
+			BufferedWriter bw = new BufferedWriter(new FileWriter(file, false));
+			String data = "16"; // need to input from SlipperCrwaling
+				while((line = br.readLine())!= null) {
+					String line2 = line + "," + data + "\n";
+					bw.write(line2);
+				}
+
 			bw.flush();
 
 		} catch (FileNotFoundException e) {
