@@ -12,6 +12,7 @@ int main() {
 	scanf("%d", &inputWon);	
 	
 	int menuNumber;
+	char *moneyName;
 	do{
 		printf("환전할 외화를 선택하세요 (1:USD, 2:JPY, 3:EUR, 4:CNY, 5:GBP) : ");
 		scanf("%d", &menuNumber);
@@ -22,27 +23,33 @@ int main() {
 	//달러 
 	if(menuNumber == 1){
 		selectCountry = DOLLAR_PER_WON;
+		moneyName = "달러"; 
 	}	
 	//엔
 	if(menuNumber == 2){ 
 		selectCountry = JPY;
+		moneyName = "엔"; 
 	}
 	//유로
 	if(menuNumber == 3){
 		selectCountry = EUR;
+		moneyName = "유로"; 
 	}
 	//위안
 	if(menuNumber == 4){
 		selectCountry = CNY;
+		moneyName = "위안"; 
 	}
 	//파운드
 	if(menuNumber == 5){
 		selectCountry = GBP;
+		moneyName = "파운드"; 
 	}
 	
 	outputMoney = inputWon / selectCountry;
 	val = (int) ((outputMoney - (int)outputMoney) * selectCountry);
-	printf("%d 원 -> %d 달러, 잔돈 %d원\n", inputWon, (int)outputMoney, val);
+	printf("%d 원 -> %d %s, 잔돈 %d원\n", inputWon, (int)outputMoney, moneyName, val);
+	
 	
 	nOf1000 = val / 1000;
 	nOf500 = (val % 1000) / 500;
