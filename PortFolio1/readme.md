@@ -14,5 +14,6 @@ SlipperMain을 통해 실행
 DistanceFinish.csv 완성
 
 SlipperMain2를 실행  -> SlipperExcelUI 실행 
+
 완성시킨 DistanceFinish.csv 파일을 토대로
 내가 원하는 년도와 시군구를 검색. 그 정보만 새로운 csv파일(Search.csv)에 띄워준다.
