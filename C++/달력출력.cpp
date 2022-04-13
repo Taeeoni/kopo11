@@ -17,8 +17,7 @@ int main() {
 	printf("월 입력 : ");
 	scanf("%d", &month_input);
 	//1900년 1월 1일 월요일 
-	int mon_day [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // 월별 일자 수 
-	char* day_name [] = {"일", "월", "화", "수", "목", "금", "토"};// 요일 이름 
+	int mon_day [] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // 월별 일자 수  
 	
 	int day_sum = 1;
 	for(int year1 = 1900; year1 < year_input; year1++){	//년도 차이만큼 일자 더하기 
@@ -41,10 +40,7 @@ int main() {
 	printf("\t\t%8d년\n", year_input);
 	printf("\t\t%6d월\n", month_input);
 	printf("-------------------------------------------------------\n");
-	for(int i = 0; i < 7; i++){
-		printf("%s\t", day_name[i]); // 월~토 출력 
-	}
-	printf("\n");
+	printf(" 일\t 월\t 화\t 수\t 목\t 금\t 토\n"); 
 	int day; 
 	for(int i = 0; i < 7; i++){ // 첫째주 
 		if(i < day_num){ // day_num (1일) 전까지는 공백 출력 
