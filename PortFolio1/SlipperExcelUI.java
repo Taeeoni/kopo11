@@ -37,11 +37,11 @@ public class SlipperExcelUI {
 			int count = 0;
 			while ((line = br.readLine()) != null) {
 				String[] lineSplit = line.split(",");
-				if (count == 0) {
+				if (count == 1) {
 					for (int a = 0; a < lineSplit.length; a++) {
 						bw.write(lineSplit[a] + ",");
 					}
-				} else if (count >= 1) {
+				} else if (count >= 2) {
 					if (lineSplit[0].contains(name) && lineSplit[6].contains(year)) {
 						bw.newLine();
 						for (int a = 0; a < lineSplit.length; a++) {
@@ -77,11 +77,11 @@ public class SlipperExcelUI {
 
 			while ((line = br.readLine()) != null) {
 				String[] lineSplit = line.split(",");
-				if (count == 0) {
+				if (count == 1) {
 					for (int a = 0; a < lineSplit.length; a++) {
 						bw.write(lineSplit[a] + ",");
 					}
-				} else if (count >= 1) {
+				} else if (count >= 2) {
 					if (lineSplit[6].equals(name)) {
 						bw.newLine();
 						for (int a = 0; a < lineSplit.length; a++) {
