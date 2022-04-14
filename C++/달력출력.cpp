@@ -51,9 +51,11 @@ int main() {
 		}		
 	}
 	printf("\n");
+	int week = 0;
 	for(int days = day + 1; days <= mon_day[month_input - 1]; days++){ // 나머지 주 , 월에 알맞는 일까지 출력 
 		printf(" %d\t", days);
-		if(days % 7 == day){ // 7번 출력했다면 다음라인으로  
+		week++;
+		if(week % 7 == 0){ // 7번 출력했다면 다음라인으로  
 			printf("\n");
 		}
 	}	
